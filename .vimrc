@@ -2,7 +2,11 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set encoding=utf-8
 set guifont=Roboto\ Mono\ for\ Powerline
-
+set autochdir
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -37,6 +41,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'raimondi/delimitmate'
+Plugin 'scrooloose/nerdtree'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,6 +76,7 @@ set ai
 set si
 set wrap
 set number
+set relativenumber
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
@@ -120,3 +127,6 @@ let g:tmuxline_separators = {
     \ 'right' : '',
     \ 'right_alt' : '|',
     \ 'space' : ' '}
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
