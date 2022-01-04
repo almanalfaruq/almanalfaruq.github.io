@@ -1,144 +1,173 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almantera</title>
 
-     <title>Almantera's CV</title>
+    <script src="https://kit.fontawesome.com/ec80790faa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
 
-     <style type="text/css">
-        * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
-        .clear { clear: both; }
-        #page-wrap { width: 800px; margin: 40px auto 60px; }
-        #pic { float: right; margin: -30px 0 0 0; }
-        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
-        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
-        li span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-		h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-        p { margin: 0 0 16px 0; }
-        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
-        a:hover { border-bottom-style: solid; color: black; }
-        ul { margin: 0 0 32px 17px; }
-		li { position: relative; }
-        #objective { width: 500px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-        dd { width: 600px; float: right; }
-        dd.clear { float: none; margin: 0; height: 15px; }
-     </style>
+    <style>
+        body {
+            background-color: #faffff;
+            display: flex;
+            height: 100vh;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: auto 10vw;
+        }
+
+        .img-profile {
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+
+        .detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-right: 100px;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 35px;
+            margin: 0;
+        }
+
+        .subtitle-big {
+            margin: 0;
+            font-size: 15px;
+            color: rgb(97, 97, 97);
+        }
+
+        .subtitle-small {
+            display: none;
+        }
+
+
+        .body {
+            font-size: 18px;
+        }
+
+        a {
+            color: unset;
+        }
+
+        .footer {
+            display: flex;
+        }
+
+        .fab {
+            font-size: 30px;
+        }
+
+        .socmed:first-of-type {
+            margin: 0;
+        }
+
+        .socmed {
+            margin-left: 20px;
+        }
+
+        .fab:hover {
+            color: rgb(97, 97, 97);
+        }
+
+        @media only screen and (max-width: 1000px) {
+            body {
+                height: 75vh;
+                justify-content: center;
+            }
+
+            .image {
+                margin: auto;
+            }
+
+            .img-profile {
+                width: 150px;
+                border: 1px solid black;
+            }
+
+            .center {
+                flex-direction: column;
+            }
+
+            .detail {
+                align-items: center;
+                padding-right: 0;
+                margin-top: 15px;
+                height: 20vh;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .subtitle-big {
+                display: none;
+            }
+
+            .subtitle-small {
+                font-size: 9px;
+                display: flex;
+                justify-content: center;
+                color: rgb(97, 97, 97);
+                margin: 0;
+            }
+
+            .body {
+                display: none;
+            }
+
+            .fab {
+                font-size: 20px;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
+    <div class="center">
+        <div class="image">
+            <img src="./images/profile.jpg" class="img-profile" width="400" alt="profile">
+        </div>
+        <div class="detail">
+            <div class="header">
+                <h3 class="title">Almantera Tiantana Al Faruqi</h3>
+                <p class="subtitle-big">Sleepy head most of the times - alman.alfaruq@gmail.com</p>
+                <p class="subtitle-small">Self-proclaimed Back End Developer - alman.alfaruq@gmail.com</p>
+            </div>
+            <p class="body">
+                A newbie back-end developer who eager to learn all of the programming language. Has passion
+                in photography and some finger style with guitar. Really like hot and spicy food.<br><br>
+                Mostly speak in golang.
+            </p>
+            <div class="footer">
+                <a href="https://twitter.com/almanalfaruq" target="_blank" class="socmed">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/almanalfaruq" target="_blank" class="socmed">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://steamcommunity.com/id/xdrake20" target="_blank" class="socmed">
+                    <i class="fab fa-steam"></i>
+                </a>
+            </div>
 
-    <div id="page-wrap">
-    
-        <img src="images/profil.jpg" alt="Photo of Cthulu" id="pic" height="250" width="250" />
-    
-        <div id="contact-info" class="vcard">
-        
-            <!-- Microformats! -->
-        
-            <h1 class="fn">Almantera Tiantana Al Faruqi</h1>
-        
-            <p>
-                Phone: <span class="tel">+62 812-2581-2599</span><br />
-                Email: <a class="email" href="mailto:alman.alfaruq@gmail.com">alman.alfaruq@gmail.com</a>
-            </p>
+            <!-- Bingung mau nulis apaan lagi. Kalo ada masukan, please reach me haha -->
         </div>
-                
-        <div id="objective">
-            <p>
-            	A newbie back-end developer who wants to learn all of the programming language. Has passion
-				in photography and some finger style with guitar. Really like hot and spicy food.
-            </p>
-        </div>
-        
-        <div class="clear"></div>
-        
-        <dl>
-            <dd class="clear"></dd>
-            
-            <dt>Education</dt>
-            <dd>
-			<ul>
-				<li><h2>SMA Negeri 1 Surakarta <span>(2013-2015)</span></h2></li>
-				<p>Accelleration Program</p>   
-				<li><h2>Universitas Gadjah Mada <span>(2015-Now)</span></h2></li>
-                <p><strong>Major:</strong> Information and Technology<br />
-                   <strong>Minor:</strong> Software Engineering</p>
-			</ul>
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Skills</dt>
-            <dd>
-                <h2>Design</h2>
-				<ul>
-					<li>Adobe Photoshop</li>
-					<li>Corel Draw</li>
-					<li>Adobe Lightroom</li>
-				</ul>                
-                <h2>Programming</h2>
-				<ul>
-					<li>Java</li>
-					<li>C#</li>
-					<li>Ruby</li>
-				</ul>
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Experience</dt>
-            <dd>
-			<ul>
-				<li>Finalist Hackathon DSSDI UGM <span>2016</span></li>
-				<li>Design and Documentation Committee in EPDay <span>2016</span></li>
-				<li>Software Development Competition Technical Committee in Technocorner <span>2017</span></li>
-				<li>Participant Hackathon IWIC <span>2016</span></li>
-				<li>Public Relationship Committee in Business School <span>2017</span></li>
-				<li>Finalist PIC Ristek Fair <span>2017</span></li>
-				<li>Finalist Hackathon IFEST UAJY <span>2017</span></li>
-				<li>1st Position in Design Poster PIMNAS 30 <span>2017</span></li>
-				<li>Participant Hackathon BNI <span>2017</span></li>
-				<li>1st Position in Technology Development KRTI <span>2017</span></li>	
-			</ul>
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Hobbies</dt>
-			<dd>
-			<ul>
-				<li>Gaming</li>
-				<li>Playing Guitar</li>
-				<li>Photography</li>
-				<li>Travelling</li>
-				<li>Watching Movies</li>
-			</ul>
-			</dd>            
-            <dd class="clear"></dd>
-            
-            <dt>Follow me on</dt>
-            <dd>
-			<ul>
-				<li><a href="https://github.com/almanalfaruq">Github</a></li>
-				<li><a href="https://instagram.com/almanalfaruq">Instagram</a></li>
-				<li><a href="https://twitter.com/almanalfaruq">Twitter</a></li>
-				<li><a href="https://facebook.com/almanalfaruq">Facebook</a></li>
-				<li><a href="httsp://ask.fm/almanalfaruq">Ask.fm</a></li>
-			</ul></dd>
-            
-            <dd class="clear"></dd>
-        </dl>
-        
-        <div class="clear"></div>
-    
     </div>
-
 </body>
 
 </html>
